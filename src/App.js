@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import BlackBoxAnimated from './BlackBoxAnimated';
+import styled from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Wrapper = styled.div`
+
+`;
+
+
+const ImageBox = styled.div`
+  width: 600px;
+  height: 400px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0598/4081/products/Frenchie-Bulldog-Reversible-Duo-Harness-Magical-Unicorn-6.jpg?v=1542336257');
+  background-size: cover;
+  backgroud-position: center;
+`;
+
+class App extends Component {
+  render(){
+    return (
+    <Wrapper>
+      <ImageBox>
+        <BlackBoxAnimated/>
+      </ImageBox>
+    </Wrapper>
+    );
+  }
 }
 
 export default App;
